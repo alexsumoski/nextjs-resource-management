@@ -1,16 +1,21 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { useState } from 'react';
+import Navbar from "../components/Navbar";
+import ResourceHighlight from "../components/ResourceHighlight";
+import Newsletter from "../components/Newsletter";
+import ResourceList from "../components/ResourceList";
+import Footer from "../components/Footer";
 
-export default function Home() {
-  const [myValue, setValue] = useState(0);
+function Home() {
 
   return (
-    <div className={styles.container}>
-      <span>Current Value: { myValue }</span>
-      <button onClick={() => setValue(myValue+1)}>+</button>
-      <button onClick={() => setValue(myValue-1)}>-</button>
-    </div>
+    <>
+      <Navbar />
+      <ResourceHighlight />
+      <Newsletter />
+      <ResourceList />
+      <Footer />
+    </>
   )
 }
+
+
+export default Home;
